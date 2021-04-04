@@ -1,6 +1,6 @@
 // Assignment code here
 var generatePassword = function () {
-  debugger;
+  // debugger;
   var length = Number(prompt("How many characters would you like your password to be?"));
   while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
  console.log(length)
@@ -31,12 +31,12 @@ var generatePassword = function () {
   };
 
     // filter out unchecked types 
-
+  
     // Generats the PW
   let generatedPassword = "";
   // randomly choose which char to use next throughout loop x depending on length chosen
       for (let i=0; i<length; i ++) {
-        // debugger;
+        debugger;
         function getRandomCharacter(characterType) {
           switch (characterType) {
             case 'lowers':
@@ -53,10 +53,11 @@ var generatePassword = function () {
               return specialChars[Math.floor(Math.random() * specialChars.length)];
               break;
           }
+          switch (i){}
         }
         // randomly choose char of type from each loop
         // function getRandomCharacter(i) {
-
+          switch (i){}
         //     case 'lowercase':
         //     case 'uppercase':
         //     case 'number':
@@ -65,7 +66,6 @@ var generatePassword = function () {
         // }
         generatedPassword = generatedPassword + [i]
         console.log(i)
-        switch (getRandomCharacter){}
       }
       return generatedPassword
 }
