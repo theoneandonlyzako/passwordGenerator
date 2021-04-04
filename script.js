@@ -1,6 +1,6 @@
 // Assignment code here
 var generatePassword = function () {
-  debugger;
+  // debugger;
   var length = Number(prompt("How many characters would you like your password to be?"));
   while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters. How many characters would you like your password to be?"));
  console.log(length)
@@ -29,39 +29,22 @@ var generatePassword = function () {
     numbers = confirm("Would you like to use numbers?");
     symbols = confirm("Would you like to use special characters?");
 
-    function generatePassword(){
-      // 1. init pw var
-      // 2. filter out unchecked types
+    
+      // 1. pull local storage data from browser
+      // 2. filter out unchecked types using "if" statements
       // 3. loop over length call generator function for each type
       // 4. add final pw to the pw var and return to window
-
-      let generatedPassword = "";
-    
-       // if confirm.upper (upper = true) {
-    //   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-    //   }
-    // }
-    
-    // if (confirm.lower = true) {
-    //   function randomLowerCase() {
-    //   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-    //   }
-    // }
-    
-    // if (confirm.numbers = true) {
-    //   function randomNumber() {
-    //   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-    //   }
-    // }
-    
-    // if (confirm.symbols = true) {
-    //   function randomSymbol() {
-    //   const symbols = '`~!@#$%^&*()-_=+[{]}|;:",<.>/?';
-    //   return symbols[Math.floor(Math.random() * symbols.length)];
-    //   }
-    // }
-    }
+      // 5. clear local storage (once displayed)
+  
   };
+  let generatedPassword = "";
+
+      for (let i=0; i<length; i ++) {
+        // randomly selecet chartype
+        // randomly choose char of type from above
+        generatedPassword = generatedPassword + "s"
+      }
+      return generatedPassword
 }
 
 function writePassword(){
@@ -81,36 +64,6 @@ generateBtn.addEventListener("click", writePassword);
 
 // code to keep for now -->
 
-
-// if (confirm.upper = true) {
-//   function randomUpperCase() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-//   }
-// }
-
-// if (confirm.lower = true) {
-//   function randomLowerCase() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-//   }
-// }
-
-// if (confirm.numbers = true) {
-//   function randomNumber() {
-//   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-//   }
-// }
-
-// if (confirm.symbols = true) {
-//   function randomSymbol() {
-//   const symbols = '`~!@#$%^&*()-_=+[{]}|;:",<.>/?';
-//   return symbols[Math.floor(Math.random() * symbols.length)];
-//   }
-// }
-
-// Write password to the #password input
-// function writePassword(uppers, lowers, numbers, symbols) {
-//   String.fromCharCode(65)
-// }
 
 // function arrayFromHighToLow (low, high) {
 //   const array =[]
@@ -146,22 +99,22 @@ generateBtn.addEventListener("click", writePassword);
 //   symbol: getRandomsymbol
 // };
 
-// function randomLowerCase() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-// }
+function randomLowerCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+}
 
-// function randomUpperCase() {
-//   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-// }
+function randomUpperCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
 
-// function randomNumber() {
-//   return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-// }
+function randomNumber() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
 
-// function randomSymbol() {
-//   const symbols = '`~!@#$%^&*()-_=+[{]}|;:",<.>/?';
-//   return symbols[Math.floor(Math.random() * symbols.length)];
-// }
+function randomSymbol() {
+  const symbols = '`~!@#$%^&*()-_=+[{]}|;:",<.>/?';
+  return symbols[Math.floor(Math.random() * symbols.length)];
+}
 
 
 // const UPPERCASE_CHAR_CODES = arrayFromHighToLow(65, 90)
