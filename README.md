@@ -17,4 +17,4 @@ To create a password Generator that prompts the user with questions regarding th
 - Git Repo - https://github.com/theoneandonlyzako/passwordGenerator</br>
 - Direct link - https://theoneandonlyzako.github.io/passwordGenerator/ </br></br>
 
-![img](site.png)
+![img](assets/site.png)
